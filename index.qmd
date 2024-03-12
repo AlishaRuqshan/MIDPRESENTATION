@@ -149,14 +149,6 @@ df <- dplyr::select(df, -c(AIRLINE_DOT, AIRLINE_CODE, DOT_CODE, CANCELLATION_COD
 print(head(df))
 ```
 
-## AUGMENTED DICKEY FULLER TEST, ACF , PCF :
-
-**Augmented Dickey-Fuller Test Purpose**: The ADF test is used to test for a unit root in a time series, i.e., to check if the series is non-stationary.
-
-**Observation:** The value of the test statistic (-38.0455) is much less than any of the critical values (for 1%, 5%, and 10% significance levels), suggesting that we can reject the null hypothesis of the presence of a unit root.
-
-**Inference**: The DELAY_DUE_CARRIER time series is stationary and does not require differencing to make it stationary.
-
 ## ACF Plot
 
 **Purpose:** The ACF plot shows the correlation of the series with itself at different lags. It's useful for identifying the order of an MA (Moving Average) process.
@@ -172,6 +164,14 @@ print(head(df))
 **Observation**: The PACF shows a few significant spikes at specific lags, but much like the ACF, it quickly falls within the significance bounds.
 
 **Inference:** The significant spikes could suggest potential AR terms for an ARIMA model, but the quick drop-off indicates a lack of strong autocorrelation at higher lags.
+
+## AUGMENTED DICKEY FULLER TEST, ACF , PCF :
+
+**Augmented Dickey-Fuller Test Purpose**: The ADF test is used to test for a unit root in a time series, i.e., to check if the series is non-stationary.
+
+**Observation:** The value of the test statistic (-38.0455) is much less than any of the critical values (for 1%, 5%, and 10% significance levels), suggesting that we can reject the null hypothesis of the presence of a unit root.
+
+**Inference**: The DELAY_DUE_CARRIER time series is stationary and does not require differencing to make it stationary.
 
 ```{r}
 library(urca)
@@ -227,7 +227,7 @@ STL Decomposition: STL separates a time series into three components:
 
 ![](image 3.jpeg)STL is flexible and robust to outliers and can handle any type of seasonality pattern not just fixed annual seasonality followed by Exponential Smoothing.After STL decomposition the remainder component is then modeled using an Exponential Smoothing model similar to the ETS model mentioned before but without the seasonal component as it's already been accounted for by STL.
 
-## Simuation of the models:
+## Simulation of the models:
 
 1.  E**xponential Smoothing State Space Model (ETS)** .
 

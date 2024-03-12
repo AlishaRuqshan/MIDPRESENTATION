@@ -574,13 +574,7 @@ DISHA BHAVESH MARU AND ALISHA RUQSHAN KADIRI
 5                 0             0                  0                       0
 6                 0             0                  0                       0</code></pre>
 </div>
-</div></section><section id="augmented-dickey-fuller-test-acf-pcf" class="slide level2">
-<h2>AUGMENTED DICKEY FULLER TEST, ACF , PCF :</h2>
-<p><strong>Augmented Dickey-Fuller Test Purpose</strong>: The ADF test is used to test for a unit root in a time series, i.e., to check if the series is non-stationary.</p>
-<p><strong>Observation:</strong> The value of the test statistic (-38.0455) is much less than any of the critical values (for 1%, 5%, and 10% significance levels), suggesting that we can reject the null hypothesis of the presence of a unit root.</p>
-<p><strong>Inference</strong>: The DELAY_DUE_CARRIER time series is stationary and does not require differencing to make it stationary.</p>
-</section>
-<section id="acf-plot" class="slide level2">
+</div></section><section id="acf-plot" class="slide level2">
 <h2>ACF Plot</h2>
 <p><strong>Purpose:</strong> The ACF plot shows the correlation of the series with itself at different lags. It’s useful for identifying the order of an MA (Moving Average) process.</p>
 <p><strong>Observation</strong>: The ACF values drop off quickly to within the significance bounds (the blue dashed lines) after the initial lag.</p>
@@ -591,6 +585,12 @@ DISHA BHAVESH MARU AND ALISHA RUQSHAN KADIRI
 <p><strong>Purpose</strong>: The PACF plot shows the partial correlation of the series with itself at different lags, with the correlation at lower lags removed. It’s useful for identifying the order of an AR (Autoregressive) process.</p>
 <p><strong>Observation</strong>: The PACF shows a few significant spikes at specific lags, but much like the ACF, it quickly falls within the significance bounds.</p>
 <p><strong>Inference:</strong> The significant spikes could suggest potential AR terms for an ARIMA model, but the quick drop-off indicates a lack of strong autocorrelation at higher lags.</p>
+</section>
+<section id="augmented-dickey-fuller-test-acf-pcf" class="slide level2">
+<h2>AUGMENTED DICKEY FULLER TEST, ACF , PCF :</h2>
+<p><strong>Augmented Dickey-Fuller Test Purpose</strong>: The ADF test is used to test for a unit root in a time series, i.e., to check if the series is non-stationary.</p>
+<p><strong>Observation:</strong> The value of the test statistic (-38.0455) is much less than any of the critical values (for 1%, 5%, and 10% significance levels), suggesting that we can reject the null hypothesis of the presence of a unit root.</p>
+<p><strong>Inference</strong>: The DELAY_DUE_CARRIER time series is stationary and does not require differencing to make it stationary.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">library</span>(urca)</span>
 <span id="cb6-2"><a href=""></a></span>
@@ -686,8 +686,8 @@ phi1  6.43  4.59  3.78</code></pre>
 <p>STL Decomposition: STL separates a time series into three components:</p>
 <p><img data-src="image%203.jpeg">STL is flexible and robust to outliers and can handle any type of seasonality pattern not just fixed annual seasonality followed by Exponential Smoothing.After STL decomposition the remainder component is then modeled using an Exponential Smoothing model similar to the ETS model mentioned before but without the seasonal component as it’s already been accounted for by STL.</p>
 </section>
-<section id="simuation-of-the-models" class="slide level2 scrollable">
-<h2>Simuation of the models:</h2>
+<section id="simulation-of-the-models" class="slide level2 scrollable">
+<h2>Simulation of the models:</h2>
 <ol type="1">
 <li>E<strong>xponential Smoothing State Space Model (ETS)</strong> .</li>
 </ol>
@@ -704,7 +704,7 @@ phi1  6.43  4.59  3.78</code></pre>
 </div>
 
 </section>
-<section id="simuation-of-the-models-output" class="slide level2 output-location-slide"><h2>Simuation of the models:</h2><div class="cell output-location-slide">
+<section id="simulation-of-the-models-output" class="slide level2 output-location-slide"><h2>Simulation of the models:</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
 <div>
 <figure>
