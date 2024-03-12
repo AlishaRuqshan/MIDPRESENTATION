@@ -684,8 +684,7 @@ phi1  6.43  4.59  3.78</code></pre>
 <section id="seasonal-and-trend-decomposition-using-loess-stl-followed-by-exponential-smoothing" class="slide level2">
 <h2>Seasonal and Trend Decomposition using Loess (STL) followed by Exponential Smoothing</h2>
 <p>STL Decomposition: STL separates a time series into three components:</p>
-
-<img data-src="image%203.jpeg" class="r-stretch"><p>STL is flexible and robust to outliers and can handle any type of seasonality pattern not just fixed annual seasonality followed by Exponential Smoothing.After STL decomposition the remainder component is then modeled using an Exponential Smoothing model similar to the ETS model mentioned before but without the seasonal component as it’s already been accounted for by STL.</p>
+<p><img data-src="image%203.jpeg">STL is flexible and robust to outliers and can handle any type of seasonality pattern not just fixed annual seasonality followed by Exponential Smoothing.After STL decomposition the remainder component is then modeled using an Exponential Smoothing model similar to the ETS model mentioned before but without the seasonal component as it’s already been accounted for by STL.</p>
 </section>
 <section id="simuation-of-the-models" class="slide level2 scrollable">
 <h2>Simuation of the models:</h2>
@@ -928,12 +927,6 @@ $`Horizon 10`
 </section>
 <section id="discussion-and-comparison" class="slide level2">
 <h2>Discussion and Comparison:</h2>
-<p><strong>Forecast Accuracy</strong>: Model 2 consistently shows lower error across all forecast horizons, indicating better predictive performance than Model 1. The lower cross-validation errors suggest Model 2 is more accurate and reliable for forecasting.</p>
-<p><strong>Residual Analysis</strong>: The Ljung-Box test results and ACF plots suggest that Model 2 has more effectively captured the underlying pattern in the data without leaving much autocorrelation in the residuals. This indicates a better fit to the data compared to Model 1.</p>
-<p><strong>Hence</strong> Model 2 enhanced accuracy and better fit to the data make it a more reliable choice for operational planning and strategic decision-making in the aviation industry.</p>
-</section>
-<section id="conclusion" class="slide level2">
-<h2>Conclusion:</h2>
 <p><strong>Forecast Accuracy :</strong></p>
 <p>The cross-validation errors serve as a quantitative measure of forecast accuracy providing clear evidence of each model’s predictive capabilities.</p>
 <p>Model 2’s lower error rates across various forecast horizons which are Horizon 1, Horizon 5, and Horizon 10 suggests that it is better at predicting flight delays with fewer mistakes.</p>

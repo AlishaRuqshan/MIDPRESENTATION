@@ -225,9 +225,7 @@ Here the model combines error, trend and seasonality components hence 'ETS'. Dif
 
 STL Decomposition: STL separates a time series into three components:
 
-![](image%203.jpeg)
-
-STL is flexible and robust to outliers and can handle any type of seasonality pattern not just fixed annual seasonality followed by Exponential Smoothing.After STL decomposition the remainder component is then modeled using an Exponential Smoothing model similar to the ETS model mentioned before but without the seasonal component as it's already been accounted for by STL.
+![](image 3.jpeg)STL is flexible and robust to outliers and can handle any type of seasonality pattern not just fixed annual seasonality followed by Exponential Smoothing.After STL decomposition the remainder component is then modeled using an Exponential Smoothing model similar to the ETS model mentioned before but without the seasonal component as it's already been accounted for by STL.
 
 ## Simuation of the models:
 
@@ -394,14 +392,6 @@ print(rmse_list)
 ```
 
 ## Discussion and Comparison:
-
-**Forecast Accuracy**: Model 2 consistently shows lower error across all forecast horizons, indicating better predictive performance than Model 1. The lower cross-validation errors suggest Model 2 is more accurate and reliable for forecasting.
-
-**Residual Analysis**: The Ljung-Box test results and ACF plots suggest that Model 2 has more effectively captured the underlying pattern in the data without leaving much autocorrelation in the residuals. This indicates a better fit to the data compared to Model 1.
-
-**Hence** Model 2 enhanced accuracy and better fit to the data make it a more reliable choice for operational planning and strategic decision-making in the aviation industry.
-
-## Conclusion:
 
 **Forecast Accuracy :**
 
